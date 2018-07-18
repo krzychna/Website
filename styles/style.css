@@ -1,94 +1,75 @@
 html{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  background-color:  #3D405B;
-  color: #F4F1DE;
+  font-size: 10px;
+  font-family: 'Abel', sans-serif;
+  box-sizing: border-box;
 }
 
-.rectangle-h{
-  margin-top: 5%;
-  margin-left: auto;
-  margin-right: auto;
-  border: 1px solid white;
-  max-width: 80%;
+body{
+  background-color: rgba(0,0,200,0.4);
+  width: 800px;
+  margin: 10px auto;
 }
 
-#name{
-  width: 60%;
-  margin: 5px;
-  padding: 0 20px;
-  font-size: 80px;
-  float: left;
-}
-
-#clock{
-  margin: 5px;
-  font-size: 80px;
-  float: right;
-}
-
-.rectangle-cont{
-  margin: 20px auto;
-  width: 80%;
-  height: 640px;
-  border: 1px solid white;
-}
-
-#content{
-  width: 750px;
-  margin: 5px;
-  padding: 20px;
-  font-size: 24px;
-  float: left;
-}
-
-.rectangle-v{
-  width: auto;
+body header, article, footer, li{
   height: auto;
-  margin: 5px auto;
-  font-size: 40px;
-  float: right;
+  background-image: linear-gradient(to bottom right, white, rgba(0,0,0,0.9));
+  border: 1px solid black;
+  border-radius: 40px 20px / 40px 20px;
+  margin: 10px 5px;
+  padding: 0 3rem;
+  font-size: 2rem;
+  box-shadow: 10px 10px 5px black,
+              inset -20px -10px 20px rgba(0,0,0,0.2),
+              inset 20px 10px 10px rgba(255,255,255,0.2),
+              30px 30px 20px rgba(0,0,70,0.9);
 }
-.sidebar{
-  height: auto;
-  padding: 20px 20px;
-  width: auto;
-  margin: 15px auto;
-  margin-right: 5px;
+
+body article:hover, footer:hover, li:hover{
+  background-image: linear-gradient(to bottom right, white, rgba(0,0,0,0.5));
+  box-shadow: 10px 10px 5px black,
+              inset 20px 10px 10px rgba(255,255,255,0.2),
+              30px 30px 20px rgba(0,0,70,0.9);
+}
+
+body header{
+  margin-top: 40px;
+}
+
+body header h1{
+
+  font-size: 3rem;
+  font-family: 'Bad Script', cursive;
+  text-shadow: 2px 2px 1px rgba(0,0,0,0.5),
+               4px 4px 1px rgba(0,0,10,0.4),
+               6px 6px 2px rgba(0,0,20,0.3),
+               8px 8px 2px rgba(0,0,50,0.2),
+               10px 10px 5px rgba(0,0,70,0.9);
+  letter-spacing: 5px;
+}
+
+section{
+  display: flex;
+}
+
+h2{
+  font-size: 2.5rem;
+}
+
+article{
+  height: 480px;
+  flex: 3 200px;
+}
+
+aside{
+  flex: 1 50px;
+}
+
+aside nav ul li{
   text-align: center;
-}
-#Bio{
-  background-color: #81B29A;
-}
-
-#Bio:hover{
-  background-color: #619e81;
-  color:#e6dfb3;
+  list-style-type: none;
+  padding: 0.5rem 0;
 }
 
-#Projects{
-  background-color: #81b1b1;
-}
-
-#Projects:hover{
-  background-color: #619e9e;
-  color:#e6dfb3;
-}
-
-#Skills{
-  background-color: #8199b1;
-}
-
-#Skills:hover{
-  background-color: #61809e;
-  color:#e6dfb3;
-}
-
-#footer{
-  font-size: 24px;
-  padding: 0 20px;
-  text-align: left;
-}
-a:-webkit-any-link{
-  color: #F4F1DE;
+ul{
+  padding: 2rem 1rem;
 }
