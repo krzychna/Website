@@ -1,79 +1,17 @@
 html{
   box-sizing: border-box;
-  font-size: 10px;
-  font-family: 'Open Sans', sans-serif;
 }
-body{
-  width: 800px;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 20px;
+
+.container{
+  width: 1200px;
+  height: 200px;
+  border: 2px solid black;
   margin: 0 auto;
-  background-color: #082d3a;
+  margin-top: 60px;
 }
-header,footer{
-  display: flex;
-  padding-left: 3rem;
-  border: 10px solid rgba(39, 117, 145, 0.6);
-  border-radius: 20px;
-  background: rgba(39, 117, 145, 0.6);
-}
-header{
-  margin-top: 40px;
-  grid-column: 1/6;
-  grid-row: 1;
-}
-header > h1{
-font-family: 'Suravaram', serif;
-font-size: 5rem;
-letter-spacing: 2px;
-text-shadow: 3px 3px 3px black;
-margin: 10px 0px;
-}
-main{
-  grid-column: 1/5;
-  grid-row: 2;
-}
-article{
-  padding: 20px 40px;
-  height: 640px;
-  background-color: rgba(167, 184, 181, 0.6);
-  border-radius: 20px;
-  border: 10px solid rgba(167, 184, 181, 0.6);
-}
-h2{
-font-size: 2.5rem;
-}
-h2 + *{
-  font-size: 1.5rem;
-}
-nav{
-  grid-column: 5;
-  grid-row: 2;
-}
-nav > ul{
-  padding: 0 20px;
-}
-nav ul > li{
-  border-radius: 20px;
-  border: 6px solid rgba(206, 196, 186, 0.6);
-  background-color: rgba(206, 196, 186, 0.6);
-  font-size: 2rem;
-  list-style: none;
-  padding: 10px;
-  margin: 10px auto;
-}
-nav ul > li:hover{
-  box-shadow: 64px 64px 5px rgba(0,0,0,0),
-              inset -2px -2px 2px rgba(0,0,0,0.4),
-              inset 2px 2px 2px rgba(255,255,255,0.4);
-}
-p{
-  text-indent: 40px;
 
-}
-footer{
-
-  grid-column: 1/6;
-  grid-row: 3;
+.container header{
+  width: 100%;
+  margin: 0;
+  position: relative;
 }
