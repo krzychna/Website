@@ -2,7 +2,7 @@
 function setup() {
   var divCan = document.getElementById('canvas');
   var width = divCan.clientWidth;
-  var height = divCan.clienHeight;
+  var height = 800;
   var canvas = createCanvas(width,height);
   background('rgba(51,51,51,0.4)');
 }
