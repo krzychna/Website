@@ -93,7 +93,9 @@ footer{
   font-size: 2rem;
   transform: translate(-50%, -50%);
 }
-
+/* ----------------------------------------- */
+/* PC WITH WIDTH LESS THAN 800PX */
+/* ----------------------------------------- */
 @media (max-width: 800px){
   .portfolio{
     margin: 0 auto;
@@ -136,11 +138,56 @@ footer{
     transform: translate(-50%, -50%);
   }
 }
-@media (max-width: 600px){
+
+/* ----------------------------------------- */
+/* PHONES WITH WIDTH LESS THAN 600PX */
+/* ----------------------------------------- */
+@media screen and (max-device-width: 800px){
+  .portfolio{
+    margin: 60px auto;
+    font-size: 6rem;
+    display: block;
+    text-align: center;
+  }
+  .container{
+    max-width: 800px;
+    min-width: 440px;
+  }
+  .container header nav ul{
+    /* display: inline-block; */
+    display: flex;
+    flex: 3 100px;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    align-items:  center;
+    justify-content: space-around;
+    font-size: 4rem;
+  }
+  nav{
+    position: sticky;
+    margin: 20px auto;
+    width: 100%;
+  }
+  body{
+    min-height: 100%;
+  }
+  main {
+    margin-top: 20px;
+    min-height: 100%;
+  }
+  section{
+    vertical-align: center;
+    grid-row: 1/3;
+  }
+
+  .container header nav ul li {
+    text-align: center;
+  }
   footer{
-  position: static;
-  text-align: center;
-  margin-top: 40px;
-  transform: translate(0,0);
+    position: fixed;
+    left: 50%;
+    bottom: 0px;
+    font-size: 4rem;
+    transform: translate(-50%, -50%);
   }
 }
