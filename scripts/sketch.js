@@ -4,7 +4,7 @@ var width;
 var height;
 var divCan;
 function setup() {
-  divCan = document.getElementById('reference');
+  divCan = document.querySelector('html');
   width = divCan.offsetWidth;
   height = divCan.offsetHeight;
   canvas = createCanvas(width,height);
