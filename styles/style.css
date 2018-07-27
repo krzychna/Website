@@ -108,7 +108,14 @@ main > *{
 .inspirations >ul >li::before{
   content: "~ "
 }
-
+footer a[href*="mail"]{
+  content: url('../images/gmail30.png');
+  width: 30px;
+}
+footer a[href*="http"]{
+  content: url('../images/in30.png');
+  width: 30px;
+}
 footer{
   position: fixed;
   left: 3%;
