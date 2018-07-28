@@ -1,19 +1,13 @@
 /*jshint esversion: 6 */
 var canvas;
-var width;
-var height;
-var divCan;
 function setup() {
-  divCan = document.querySelector('html');
-  width = divCan.offsetWidth;
-  height = divCan.offsetHeight;
-  canvas = createCanvas(width,height);
+  canvas = createCanvas(windowWidth,windowHeight);
   canvas.position(0,0);
   canvas.style('z-index','-1');
   background('rgba(51,51,51,0.4)');
 }
 
-var nOfPoints = 400;
+var nOfPoints = 200;
 var points = [];
 function draw() {
 
@@ -40,7 +34,7 @@ function draw() {
 }
 
 function windowResized(){
-  width = divCan.offsetWidth;
-  height = divCan.offsetHeight;
-  resizeCanvas(width,height);
+  // width = divCan.offsetWidth;
+  // height = divCan.offsetHeight;
+  resizeCanvas(windowWidth,windowHeight);
 }
