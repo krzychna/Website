@@ -2,10 +2,14 @@
 var canvas;
 var drop = [];
 var rain = 400;
+var heightScroll = document.querySelector('html').scrollHeight;
+console.log(heightScroll);
 function setup() {
-  canvas = createCanvas(windowWidth,windowHeight);
+  canvas = createCanvas(windowWidth,heightScroll);
   canvas.position(0,0);
   canvas.style('z-index','-1');
+  canvas.style('position', 'sticky');
+  canvas.style('top' , '0');
   background('rgba(51,51,51,0.4)');
   for(var i = 0; i < rain; i++){
     drop.push(new Drop());
