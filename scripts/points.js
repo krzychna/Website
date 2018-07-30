@@ -1,31 +1,57 @@
-function Punkt(x,y,id){
-  this.x = x;
-  this.y = y;
-  this.id = id;
-  this.speed = random(1,3.2);
-  this.size = random(1,4);
+function Drop(){
+ this.loc = createVector(random(0,width),random(-height,0));
+ this.vel = createVector(0,1);
+ this.acc = createVector(0.08,0);
+ this.reject = createVector(0.1,5);
+ this.distance = createVector(0,0);
+ this.powerRange = 50;
 }
-Punkt.prototype.draw = function(){
-  strokeWeight(this.size);
-  if(this.speed>3) {
-    stroke('rgba(255,200,200,1)');
-  }
-  else if(this.speed>2) {
-    stroke('rgba(200,200,255,0.8)');
-  }
-  else if(this.speed>1) {
-    stroke('rgba(200,255,200,0.8)');
-  }
-    point(this.x,this.y);
-  };
 
-Punkt.prototype.update = function(){
-  this.y +=this.speed;
-  this.size -= 0.02;
-  if(this.y > windowHeight || this.size < 0.1){
-    this.x = random(this.id/100, windowWidth);
-    this.y = random(-windowHeight*0.01,0);
-    this.speed = random(1,4);
-    this.size = random(1,4);
-  }
+Drop.prototype.draw = function(){
+ stroke('rgba(255,255,255,0.15)');
+ strokeWeight(1);
+ point(this.loc.x,this.loc.y);
+};
+
+Drop.prototype.behave = function(){
+ this.force();
+ this.move();
+ this.checkBoundaries();
+ this.draw();
+};
+
+Drop.prototype.move = function(){
+ this.loc.add(this.vel);
+ if(abs(this.vel.x) < this.acc.x){
+   this.vel.x = 0;
+ }else if (this.vel.x > this.acc.x) {
+   this.vel.x -= this.acc.x;
+ }else{
+   this.vel.x += this.acc.x;
+ }
+};
+
+Drop.prototype.checkBoundaries = function(){
+ if(this.loc.x >= width){
+   this.vel.x = width;
+ }
+ if(this.loc.x <= 0){
+   this.loc.x = 0;
+ }
+ if(this.loc.y >= height){
+   this.loc.set(random(0,width),random(-height/2,0));
+   this.vel.set(0,2);
+ }
+ // if(this.loc.y <=  0 + this.radius/2)
+};
+
+Drop.prototype.force = function(){
+ this.distance.set(this.loc.x-mouseX,this.loc.y-mouseY);
+ if(abs(this.distance.x) < this.powerRange && abs(this.distance.y) < this.powerRange){
+   if(this.distance.x < 0){
+     this.vel.x -= this.reject.x;
+   }else{
+     this.vel.x += this.reject.x;
+   }
+ }
 };
