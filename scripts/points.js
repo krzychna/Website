@@ -1,6 +1,6 @@
 function Drop(){
  this.loc = createVector(random(0,width),random(-height,0));
- this.vel = createVector(0,1);
+ this.vel = createVector(0,random(1,1.7));
  this.acc = createVector(0.08,0);
  this.reject = createVector(0.1,5);
  this.distance = createVector(0,0);
@@ -40,7 +40,7 @@ Drop.prototype.checkBoundaries = function(){
  }
  if(this.loc.y >= height){
    this.loc.set(random(0,width),random(-height/2,0));
-   this.vel.set(0,2);
+   this.vel.set(0,1.7);
  }
  // if(this.loc.y <=  0 + this.radius/2)
 };

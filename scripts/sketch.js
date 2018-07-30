@@ -3,7 +3,6 @@ var canvas;
 var drop = [];
 var rain = 400;
 var heightScroll = document.querySelector('html').scrollHeight;
-console.log(heightScroll);
 function setup() {
   canvas = createCanvas(windowWidth,heightScroll);
   canvas.position(0,0);
