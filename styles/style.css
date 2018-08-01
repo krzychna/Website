@@ -77,12 +77,12 @@ main > *{
 #tHome, #tProjects{
   grid-column: 2/8;
   grid-row: 1/2;
-  text-align: center;
+  text-align: justify;
 }
 #tExperience{
   grid-column: 1/7;
   grid-row: 1/2;
-  text-align: center;
+  text-align: justify;
 }
 .inspirations{
   grid-column: 7/9;

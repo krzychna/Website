@@ -15,7 +15,7 @@ var mobileViewPort = window.matchMedia('screen and (max-device-width: 1200px)');
 var headerText = document.querySelector('.portfolio');
 var drawLogo = true;
 var portfolioSize = 48;
-
+var hover = document.getElementsByClassName('safe');
 
 function checkingViewPort(e){
   if(e.matches){
@@ -42,15 +42,17 @@ function setup() {
   for(let i = 0; i < rain; i++){
     drop.push(new Drop());
   }
-  textDot = font.textToPoints("Krzysztof Nowak's portfolio", windowWidth/6, windowHeight/5, portfolioSize,
+  textDot = font.textToPoints("Krzysztof Nowak's portfolio", windowWidth/2, windowHeight/5, portfolioSize,
   {sampleFactor : 0.25,
   simplifyThreshold: 0});
   for( let i = 0; i < textDot.length; i++){
     exes.push(textDot[i].x);
-    dots.push(new Particle(textDot[i].x,textDot[i].y, mouseX, mouseY));
   }
   maxWidthOfText = Math.max.apply(Math,exes);
   minWidthOfText = Math.min.apply(Math,exes);
+  for( let i = 0; i < textDot.length; i++){
+    dots.push(new Particle(textDot[i].x-((maxWidthOfText-minWidthOfText)/2),textDot[i].y, mouseX, mouseY));
+  }
 }
 
 function draw() {
@@ -79,23 +81,25 @@ function windowResized(){
 function changePosition(x,y){
   posChanged = refElement.getBoundingClientRect();
   if(posChanged.y < 30 ){
-    textDot = font.textToPoints("Krzysztof Nowak's portfolio", x/6, y/5, portfolioSize,
+    textDot = font.textToPoints("Krzysztof Nowak's portfolio", x/2, y/5, portfolioSize,
     {sampleFactor : 0.25,
     simplifyThreshold: 0});
-    for( let i = 0; i < dots.length; i++){
-      dots[i].changePos(textDot[i].x,textDot[i].y);
-    }
+    centering();
   }else{
     textDot = font.textToPoints("Krzysztof Nowak's portfolio", x/2, 50, portfolioSize,
     {sampleFactor : 0.25,
     simplifyThreshold: 0});
-    for( let i = 0; i < textDot.length; i++){
-      exes[i] = textDot[i].x;
-    }
-    maxWidthOfText = Math.max.apply(Math,exes);
-    minWidthOfText = Math.min.apply(Math,exes);
-    for( let i = 0; i < dots.length; i++){
-      dots[i].changePos(textDot[i].x - ((maxWidthOfText-minWidthOfText)/2),textDot[i].y);
-    }
+    centering();
+  }
+}
+
+function centering (){
+  for( let i = 0; i < textDot.length; i++){
+    exes[i] = textDot[i].x;
+  }
+  maxWidthOfText = Math.max.apply(Math,exes);
+  minWidthOfText = Math.min.apply(Math,exes);
+  for( let i = 0; i < dots.length; i++){
+    dots[i].changePos(textDot[i].x - ((maxWidthOfText-minWidthOfText)/2),textDot[i].y);
   }
 }

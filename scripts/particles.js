@@ -1,17 +1,23 @@
 /*jshint esversion: 6 */
-var hover = document.getElementsByClassName('safe');
-var safe;
-var start;
-function check (){
-  for( let i = 0; i < hover.length; i++ ){
-    hover[i].addEventListener('mouseout', function(){
-      safe = false;
-    });
-    hover[i].addEventListener('mouseover', function(){
-      safe = true;
-    });
+var hover = document.querySelectorAll('.safe');
+var safe = true;
+
+  for(let i = 0; i < hover.length; i++){
+    hover[i].onmouseenter = function(e){
+      if(this.matches(".safe")){
+        safe = true;
+      }
+    };
   }
-}
+  for(let i = 0; i < hover.length; i++){
+    hover[i].onmouseleave = function(e){
+      if(this.matches(".safe")){
+        safe = false;
+      }
+    };
+  }
+
+
 document.addEventListener('mouseleave', function(e){
   safe = true;
 });
@@ -19,19 +25,13 @@ document.addEventListener('mouseenter', function(e){
   safe = false;
 });
 
-check();
-
-document.addEventListener('mousemove', function(e){
-  start = true;
-});
-
 function Particle(x,y,targetX,targetY){
   this.location = createVector(x,y);
   this.base = createVector(x,y);
   this.vel = createVector(0,0);
   this.acc = createVector(0,0);
-  this.target = createVector(targetX,targetY);
-  this.mag = 0.1;
+  this.target = createVector(0,0);
+  this.mag = 0;
   this.comeBack = false;
 }
 
@@ -53,12 +53,10 @@ Particle.prototype.draw = function(){
 
 Particle.prototype.behave = function(){
   this.draw();
-  if(start){
-    this.distance();
-    this.status();
-    this.reach();
-    this.update();
-  }
+  this.distance();
+  this.reach();
+  this.status();
+  this.update();
 };
 
 Particle.prototype.reach = function(){
@@ -82,7 +80,11 @@ Particle.prototype.status = function(){
     this.comeBack = false;
   }else {
     stroke(255,255,255);
-    if(this.location.dist(this.target) < 450){
+    if(this.location.dist(this.target) < 2){
+      this.vel.limit(0);
+      this.mag = 0;
+    }
+    else if(this.location.dist(this.target) < 450){
       this.vel.limit(10);
       this.mag = 5;
     }else if(this.location.dist(this.target) < 50){
