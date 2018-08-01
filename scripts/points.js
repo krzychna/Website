@@ -8,7 +8,7 @@ function Drop(){
 }
 
 Drop.prototype.draw = function(){
- stroke('rgba(255,255,255,0.4)');
+ stroke('rgba(255,100,100,1)');
  strokeWeight(1);
  point(this.loc.x,this.loc.y);
 };

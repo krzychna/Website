@@ -15,6 +15,7 @@ var mobileViewPort = window.matchMedia('screen and (max-device-width: 1200px)');
 var headerText = document.querySelector('.portfolio');
 var drawLogo = true;
 var portfolioSize = 48;
+var densityDot = 0.25;
 var hover = document.getElementsByClassName('safe');
 
 function checkingViewPort(e){
@@ -43,7 +44,7 @@ function setup() {
     drop.push(new Drop());
   }
   textDot = font.textToPoints("Krzysztof Nowak's portfolio", windowWidth/2, windowHeight/5, portfolioSize,
-  {sampleFactor : 0.25,
+  {sampleFactor : densityDot,
   simplifyThreshold: 0});
   for( let i = 0; i < textDot.length; i++){
     exes.push(textDot[i].x);
@@ -56,7 +57,7 @@ function setup() {
 }
 
 function draw() {
-
+  console.log(frameRate());
   for(let i = 0; i < rain; i++){
     drop[i].behave();
   }
@@ -82,12 +83,12 @@ function changePosition(x,y){
   posChanged = refElement.getBoundingClientRect();
   if(posChanged.y < 30 ){
     textDot = font.textToPoints("Krzysztof Nowak's portfolio", x/2, y/5, portfolioSize,
-    {sampleFactor : 0.25,
+    {sampleFactor : densityDot,
     simplifyThreshold: 0});
     centering();
   }else{
     textDot = font.textToPoints("Krzysztof Nowak's portfolio", x/2, 50, portfolioSize,
-    {sampleFactor : 0.25,
+    {sampleFactor : densityDot,
     simplifyThreshold: 0});
     centering();
   }

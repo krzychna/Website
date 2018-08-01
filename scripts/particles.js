@@ -47,15 +47,15 @@ Particle.prototype.distance = function(){
 };
 
 Particle.prototype.draw = function(){
-  stroke('rgba(255,255,255,0.6)');
+  safe === true ? stroke('rgba(255,255,255,0.6)'): stroke('rgba(255,255,255,1)');
   point(this.location.x,this.location.y);
 };
 
 Particle.prototype.behave = function(){
-  this.draw();
   this.distance();
   this.reach();
   this.status();
+  this.draw();
   this.update();
 };
 
@@ -72,14 +72,12 @@ Particle.prototype.reach = function(){
 Particle.prototype.status = function(){
   push();
   if(!safe){
-    stroke(255,0,0);
     this.vel.limit(15);
     this.mag = 10;
     this.target.x = mouseX;
     this.target.y = mouseY;
     this.comeBack = false;
   }else {
-    stroke(255,255,255);
     if(this.location.dist(this.target) < 2){
       this.vel.limit(0);
       this.mag = 0;
