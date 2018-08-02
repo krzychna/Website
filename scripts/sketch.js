@@ -24,7 +24,7 @@ function checkingViewPort(e){
   }else{
     drawLogo = true;
   }
-  console.log(drawLogo);
+  // console.log(drawLogo);
 }
 checkingViewPort(mobileViewPort);
 mobileViewPort.addListener(checkingViewPort);
@@ -34,6 +34,7 @@ function preload(){
 }
 
 function setup() {
+  heightScroll = document.querySelector('html').scrollHeight;
   canvas = createCanvas(windowWidth,heightScroll);
   canvas.position(0,0);
   canvas.style('z-index','-1');
@@ -57,7 +58,7 @@ function setup() {
 }
 
 function draw() {
-  console.log(frameRate());
+  // console.log(frameRate());
   for(let i = 0; i < rain; i++){
     drop[i].behave();
   }
@@ -73,9 +74,10 @@ function draw() {
 }
 
 function windowResized(){
-  resizeCanvas(windowWidth,windowHeight);
+  heightScroll = document.querySelector('html').scrollHeight;
+  resizeCanvas(windowWidth,heightScroll);
   if(drawLogo){
-    changePosition(windowWidth,windowHeight);
+    changePosition(windowWidth,heightScroll);
   }
 }
 
