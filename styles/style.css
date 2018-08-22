@@ -72,7 +72,7 @@ ul{
 }
 body{
   background: linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
-  background-size: auto 100vh;
+  background-size: 100vw 100vh;
   background-attachment: fixed;
   color: SeaShell;
   font-family: 'Poppins', sans-serif;
