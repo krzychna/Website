@@ -1,4 +1,4 @@
-var text = '<strong>Welcome!</strong><br /> Nice to meet <strong>you</strong>. Let me show you what i do...'
+var text = '<strong>Welcome!</strong><br /> Nice to meet <strong>you</strong>. Let me show you what I do...'
 var curText = '';
 var letter = 0;
 var full = 0;
@@ -7,21 +7,17 @@ $(document).ready(function(){
  	full = setInterval(typeWrite, 40);
 	$('#hamburger').click(function(){
 		navigation();
-		return false;
 	});
 	$('nav ul li').click(function(e){
 		e.preventDefault();
 		menuClick(this);
-		return false;
 	})
 	$('#arrow').click(function(e){
 		arrowScroll();
-		return false;
 	})
 	$(window).scroll(function(e){
 		activeChange();
 		menuFix();
-		return false;
 	})
 	$('#gallery a').fancybox({
 		overlayColor: '#060',
@@ -45,7 +41,7 @@ function typeWrite(){
 			clearInterval(full);
 			$('.shutter').fadeOut(1000);
 			setTimeout(function(){
-				$('.shutter').css('z-index','-1');
+				$('.shutter').hide();
 				$('#Welcome, #Home, section:first-child').css('z-index','1');
 			}, 1005)
 		}
