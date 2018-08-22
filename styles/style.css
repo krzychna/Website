@@ -48,9 +48,6 @@ li{
   padding: 2px 0;
   margin: -1px;
 }
-p{
-  font-size: 1.1rem;
-}
 li:nth-child(1){
   border-radius: 7px 7px 0 0;
 }
