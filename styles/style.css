@@ -93,14 +93,11 @@ ul{
   z-index: 2;
 }
 body{
-  background: -webkit-linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
-  background: -webkit-gradient(linear, 80deg, DeepSkyBlue, DarkBlue) no-repeat;
-  background: -moz-linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
-  background: -o-linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
-  background: linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
-  background-size: 100vw 100vh;
-  position: static;
-  background-attachment: fixed;
+  background: -webkit-linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
+  background: -webkit-gradient(linear, 95deg, DeepSkyBlue, DarkBlue) no-repeat;
+  background: -moz-linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
+  background: -o-linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
+  background: linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
   color: SeaShell;
   font-family: 'Poppins', sans-serif;
 }
