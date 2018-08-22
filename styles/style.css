@@ -34,15 +34,22 @@ html{
 }
 h1{
   text-align: center;
-  padding-bottom: 40px;
+  padding: 40px 0 ;
 }
 h2 {
   padding: 30px 0;
+}
+nav{
+  margin-top: 20px;
+  position: relative;
 }
 li{
   background: #e0436a;
   padding: 2px 0;
   margin: -1px;
+}
+p{
+  font-size: 1.1rem;
 }
 li:nth-child(1){
   border-radius: 7px 7px 0 0;
@@ -55,9 +62,6 @@ li:nth-last-child(2){
 }
 .active{
   font-weight: bold;
-}
-nav{
-  position: relative;
 }
 .fixed{
   position: fixed;

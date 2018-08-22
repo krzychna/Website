@@ -52,9 +52,9 @@ function navigation(){
 function hideMenu(){
 	$('li').each(function(){
 		if(!($(this).hasClass('active'))){
-			$(this).slideUp();
+			$(this).slideUp("fast");
 		}else {
-			$(this).slideDown();
+			$(this).slideDown("fast");
 		}
 	})
 }
