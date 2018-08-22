@@ -47,7 +47,7 @@ Particle.prototype.distance = function(){
 };
 
 Particle.prototype.draw = function(){
-  safe === true ? stroke('rgba(255,255,255,0.9)'): stroke('rgba(255,255,255,1)');
+  safe === true ? stroke('rgba(0,0,0,0.9)'): stroke('rgba(0,0,0,1)');
   point(this.location.x,this.location.y);
 };
 

@@ -59,9 +59,9 @@ function setup() {
 
 function draw() {
   // console.log(frameRate());
-  for(let i = 0; i < rain; i++){
-    drop[i].behave();
-  }
+  // for(let i = 0; i < rain; i++){
+  //   drop[i].behave();
+  // }
   if(drawLogo){
     for(let i = 0; i < dots.length; i++){
       dots[i].behave();
@@ -70,7 +70,7 @@ function draw() {
   }else{
     headerText.textContent = "Krzysztof Nowak's portfolio";
   }
-  background('rgba(51,51,51,0.4)');
+  background('rgba(200,200,200,0.4)');
 }
 
 function windowResized(){
