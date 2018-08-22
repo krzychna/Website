@@ -1,5 +1,10 @@
+var text = '<strong>Welcome!</strong><br /> Nice to meet <strong>you</strong>. Let me show you what i do...'
+var curText = '';
+var letter = 0;
+var full = 0;
 $(document).ready(function(){
 	hideMenu();
+ 	full = setInterval(typeWrite, 40);
 	$('#hamburger').click(function(){
 		navigation();
 		return false;
@@ -29,6 +34,21 @@ $(document).ready(function(){
 		cyclic: true
 	});
 });
+
+
+function typeWrite(){
+		if (curText.length !== text.length) {
+			curText += text[letter];
+			letter++;
+			$('#Welcome').html(curText);
+		}else {
+			clearInterval(full);
+			$('.shutter').fadeOut(1000);
+			setTimeout(function(){
+				$('#Welcome, #Home, section:first-child').css('z-index','1');
+			}, 1005)
+		}
+}
 
 function menuFix(){
 	if ($(window).scrollTop() > $('nav').offset().top - 10) {
