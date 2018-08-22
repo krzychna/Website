@@ -71,12 +71,12 @@ ul{
   z-index: 2;
 }
 body{
-  background: linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
   background-size: 100vw 100vh;
+  background-position: static;
   background-attachment: fixed;
   color: SeaShell;
   font-family: 'Poppins', sans-serif;
-  display: grid;
+  background: linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;display: grid;
 }
 main{
   display: grid;
