@@ -40,7 +40,7 @@ html{
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 40;
+  z-index: 41;
   background-attachment: fixed;
 }
 #Welcome,#Home, section:first-child{

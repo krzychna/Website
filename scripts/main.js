@@ -45,6 +45,7 @@ function typeWrite(){
 			clearInterval(full);
 			$('.shutter').fadeOut(1000);
 			setTimeout(function(){
+				$('.shutter').css('z-index','-1');
 				$('#Welcome, #Home, section:first-child').css('z-index','1');
 			}, 1005)
 		}
