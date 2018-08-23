@@ -63,7 +63,7 @@ html{
   display: flex;
   flex: 1;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 #Certyficates{
   padding-top: 30px;
