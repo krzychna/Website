@@ -4,7 +4,11 @@ var letter = 0;
 var full = 0;
 $(document).ready(function(){
 	hideMenu();
- 	full = setInterval(typeWrite, 40);
+	$('#Character').animate({top:'0%'}, 1000);
+	setTimeout(function(){
+	full = setInterval(typeWrite, 40);
+}, 2000)
+
 	$('#hamburger').click(function(){
 		navigation();
 	});
@@ -12,7 +16,7 @@ $(document).ready(function(){
 		e.preventDefault();
 		menuClick(this);
 	})
-	$('#arrow').click(function(e){
+	$('#Arrow').click(function(e){
 		arrowScroll();
 	})
 	$(window).scroll(function(e){
@@ -33,6 +37,7 @@ $(document).ready(function(){
 
 
 function typeWrite(){
+
 		if (curText.length !== text.length) {
 			curText += text[letter];
 			letter++;
@@ -140,8 +145,8 @@ function activeChange(){
 		$('nav ul li').each(function(){
 			if($(this).text() === 'Experience'){
 				$(this).addClass('active');
-				if ($('#arrow').css('display') == 'none') {
-					$('#arrow').fadeIn();
+				if ($('#Arrow').css('display') == 'none') {
+					$('#Arrow').fadeIn();
 				}
 				if(!$('#hamburger').hasClass('open')){
 				hideMenu();
@@ -152,7 +157,7 @@ function activeChange(){
 		$('nav ul li').each(function(){
 			if($(this).text() === 'Projects'){
 				$(this).addClass('active');
-				$('#arrow').fadeOut();
+				$('#Arrow').fadeOut();
 				if(!$('#hamburger').hasClass('open')){
 				hideMenu();
 				}

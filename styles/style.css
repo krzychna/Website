@@ -47,11 +47,27 @@ html{
   z-index: 41;
   background-attachment: fixed;
 }
+
+#Character{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -30%;
+}
+
 #Welcome,#Home, section:first-child{
   z-index: 41;
 }
-#gallery{
-  padding: 10px 0;
+#Gallery{
+  padding: 1em 0;
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#Certyficates{
+  padding-top: 30px;
+  text-align: center;
 }
 h1{
   text-align: center;
@@ -108,10 +124,28 @@ main{
 }
 footer{
   position: fixed;
-  bottom: 2%;
-  right:  50%;
-  width: calc(50% + 30px);
-  transform: translateX(50%);
+  bottom: 0%;
+  left:  0%;
+  width: 100%;
+  padding-top: 4px;
+  background: #e0436a;
+  /* transform: translateX(50%); */
+}
+footer a[href*="mail"]{
+  content: url('../images/gmail30.png');
+  width: 30px;
+  display: inline-block;
+  margin-right: 15%;
+  margin-bottom: 5px;
+  float: right;
+}
+footer a[href*="http"]{
+  content: url('../images/in30.png');
+  width: 30px;
+  display: inline-block;
+  float: left;
+  margin-bottom: 5px;
+  margin-left: 15%;
 }
 /* +++++++++++++++++++ hamburger  menu  and arrow++++++++++++++++++++++++++++++*/
 #hamburger{
@@ -197,7 +231,7 @@ footer{
   width: 30px;
   height: 30px;
   left: 50%;
-  bottom: 40px;
+  bottom: 10px;
   z-index: 1;
 }
 .arrow1{
@@ -232,17 +266,6 @@ footer{
     transform: translateY(100%);
     opacity: 0;
   }
-}footer a[href*="mail"]{
-  content: url('../images/gmail30.png');
-  width: 30px;
-  display: inline-block;
-  float:right;
-}
-footer a[href*="http"]{
-  content: url('../images/in30.png');
-  width: 30px;
-  display: inline-block;
-  float: left;
 }
 /* ++++++++++++++++++++++ end of hamburger menu and arrow ++++++++++++++++++++++++ */
 /* --------------------- end of generic styling ------------------------*/
