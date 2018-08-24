@@ -1,10 +1,10 @@
-var text = '<strong>Welcome!</strong><br /> Nice to meet <strong>you</strong>. Let me show you what I do...'
+var text = '<h3><strong>Welcome!</strong></h3><br /> Nice to meet <strong>you</strong>. Let me show you what I do...'
 var curText = '';
 var letter = 0;
 var full = 0;
 $(document).ready(function(){
 	hideMenu();
-	$('#Character').animate({top:'0%'}, 1000);
+	$('#Character').animate({top:'0%'}, 2000);
 	setTimeout(function(){
 	full = setInterval(typeWrite, 40);
 }, 2000)
@@ -42,7 +42,6 @@ $(document).ready(function(){
 
 
 function typeWrite(){
-
 		if (curText.length !== text.length) {
 			curText += text[letter];
 			letter++;
@@ -128,7 +127,7 @@ function arrowScroll(){
 }
 
 function activeChange(){
-	if ($(window).scrollTop() < $('#AboutMe').offset().top - 101 ) {
+	if ($(window).scrollTop() < $('#AboutMe').offset().top * 0.8 ) {
 		$('nav ul li').each(function(){
 			if($(this).text() === 'Home'){
 				$(this).addClass('active');
@@ -137,7 +136,7 @@ function activeChange(){
 				}
 			}else $(this).removeClass('active');
 		})
-	}else if ($(window).scrollTop() < $('#Experience').offset().top - 101 ){
+	}else if ($(window).scrollTop() < $('#Experience').offset().top * 0.8 ){
 		$('nav ul li').each(function(){
 			if($(this).text() === 'About me'){
 				$(this).addClass('active');
@@ -146,7 +145,7 @@ function activeChange(){
 				}
 			}else $(this).removeClass('active');
 		});
-	}else if ($(window).scrollTop() < $('#Projects').offset().top - 300 ){
+	}else if ($(window).scrollTop() < $('#Projects').offset().top * 0.8 ){
 		$('nav ul li').each(function(){
 			if($(this).text() === 'Experience'){
 				$(this).addClass('active');

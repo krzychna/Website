@@ -52,7 +52,7 @@ html{
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: -30%;
+  top: -40%;
 }
 
 #Welcome,#Home, section:first-child{
@@ -73,7 +73,6 @@ h1{
   text-align: center;
   padding: 40px 0 ;
 }
-
 h2 {
   padding: 30px 0;
 }
@@ -83,7 +82,7 @@ nav{
 }
 li{
   background: #e0436a;
-  padding: 2px 0;
+  padding: 8px 0 8px 10%;
   margin: -1px;
 }
 li:nth-child(1){
@@ -100,13 +99,22 @@ li:nth-last-child(2){
 }
 .fixed{
   position: fixed;
-  top: -2px;
+  top: 0px;
   width: 100%;
 }
 ul{
   list-style-type: none;
   height: auto;
   z-index: 2;
+  position: absolute;
+  top: 25%;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transition: width 1s;
+  -moz-transition: width 1s;
+  -o-transition: width 1s;
+  transition: width 1s;
 }
 body{
   background: -webkit-linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
@@ -116,6 +124,7 @@ body{
   background: linear-gradient(95deg, DeepSkyBlue, DarkBlue) no-repeat;
   color: SeaShell;
   font-family: 'Poppins', sans-serif;
+  max-width: 1000px;
 }
 main{
   display: grid;
@@ -187,27 +196,27 @@ footer a[href*="http"]{
   border-radius: 0px 4px 4px 0px;
 }
 #hamburger span:nth-child(1){
-  top: 0px;
+  top: 2px;
   left: 0px;
 }
 #hamburger span:nth-child(2){
-  top: 0px;
+  top: 2px;
   left: calc(50% - 5px);
 }
 #hamburger span:nth-child(3){
-  top: 6px;
+  top: 8px;
   left: 0%;
 }
 #hamburger span:nth-child(4){
-  top: 6px;
+  top: 8px;
   left: calc(50% - 5px);
 }
 #hamburger span:nth-child(5){
-  top: 12px;
+  top: 14px;
   left: 0%;
 }
 #hamburger span:nth-child(6){
-  top: 12px;
+  top: 14px;
   left: calc(50% - 5px);
 
 }
@@ -233,6 +242,7 @@ footer a[href*="http"]{
   left: 50%;
   bottom: 10px;
   z-index: 1;
+  cursor: pointer;
 }
 .arrow1{
   animation: move 2s infinite ease-in;
@@ -267,6 +277,23 @@ footer a[href*="http"]{
     opacity: 0;
   }
 }
+html::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.6);
+	background-color: rgba(19, 44, 160, 1);
+}
+
+html::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+html::-webkit-scrollbar-thumb
+{
+	background-color: rgba(224, 67, 105, 1);
+  border-radius: 12px 0 0 0;
+}
 /* ++++++++++++++++++++++ end of hamburger menu and arrow ++++++++++++++++++++++++ */
 /* --------------------- end of generic styling ------------------------*/
 /* --------------------- Small screens --------------------------------- */
@@ -277,22 +304,8 @@ footer a[href*="http"]{
 } /* Define mobile styles */
 
 @media only screen and (max-width: 40em) {
-  ul{
-    position: absolute;
-    top: 25%;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transition: width 1s;
-    -moz-transition: width 1s;
-    -o-transition: width 1s;
-    transition: width 1s;
-  }
   h1{
     padding-bottom: 30px;
-  }
-  li{
-    padding: 10px 0 5px 9%;
   }
   body{
     padding: 10% 5%;
@@ -326,43 +339,349 @@ footer a[href*="http"]{
     flex: 1;
     align-items: center;
   }
+  #Gallery a img{
+    width: 70px;
+    height: 70px;
+  }
  } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
 /* ------------------------ end of Small screens ----------------------------*/
 /* ------------------------ Medium screens ----------------------------------*/
-@media only screen and (min-width: 40.063em) { } /* min-width 641px, medium screens */
+@media only screen and (min-width: 40.063em) {
+  main{
+    display: grid;
+    grid-auto-columns: auto;
+    grid-template-rows: repeat(9,minmax(20vh,auto));
+  }
+  main section:nth-child(1){
+    grid-row: 1;
+    height: 60vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    transform: translateY(-10%);
+  }
+  main section:nth-child(2){
+    grid-row: 3;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  main section:nth-child(3){
+    grid-row: 5;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  main section:nth-child(4){
+    grid-row: 7;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+ } /* min-width 641px, medium screens */
 
-@media only screen and (min-width: 40.063em) and (max-width: 64em) { } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  html{
+    font-size: 19px;
+  }
+  .fixed li{
+    padding: 8px 0 8px 16.5%;
+  }
+  .fixed{
+    position: fixed;
+    top: 0px;
+    width: 100%;
+  }
+  #Gallery a img{
+    width: 160px;
+    height: 160px;
+  }
+  main{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(9,minmax(20vh,auto));
+  }
+  section{
+    grid-column: 2/8;
+  }
+  main section:nth-child(1){
+    grid-row: 1;
+    height: 60vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    transform: translateY(-10%);
+  }
+  main section:nth-child(2){
+    grid-row: 3;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  main section:nth-child(3){
+    grid-row: 5;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  main section:nth-child(4){
+    grid-row: 7;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  footer a[href*="mail"]{
+    margin-right: 30%;
+  }
+  footer a[href*="http"]{
+
+    margin-left: 30%;
+  }
+ } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 /* ------------------------ end of Medium screens ----------------------------------*/
 /* ------------------------ Large screens ----------------------------------*/
-@media only screen and (min-width: 64.063em) { } /* min-width 1025px, large screens */
+@media only screen and (min-width: 64.063em) {
+   #Gallery a img{
+      width: 160px;
+      height: 160px;
+    }
+   html {
+      padding:0 15%;
+     }
+     .fixed li{
+       padding: 8px 0 8px 26.5%;
+     }
+   main{
+      display: grid;
+      grid-template-columns: repeat(8,1fr);
+      grid-template-rows: repeat(9,minmax(20vh,auto));
+     }
+   section{
+      grid-column: 2/8;
+     }
+   main section:nth-child(1){
+      grid-row: 1;
+      height: 60vh;
+      display: flex;
+      flex: 1;
+      align-items: center;
+      transform: translateY(-10%);
+     }
+   main section:nth-child(2){
+      grid-row: 3;
+      display: flex;
+      flex: 1;
+      align-items: center;
+     }
+   main section:nth-child(3){
+      grid-row: 5;
+      display: flex;
+      flex: 1;
+      align-items: center;
+     }
+   main section:nth-child(4){
+      grid-row: 7;
+      display: flex;
+      flex: 1;
+      align-items: center;
+     }
+ } /* min-width 1025px, large screens */
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
-    body {
-      font-size:110%;
+   #Gallery a img{
+    width: 160px;
+    height: 160px;
     }
-
-   } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+    .fixed li{
+      padding: 8px 0 8px 26.5%;
+    }
+   body {
+    font-size:110%;
+   }
+   main{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(9,minmax(20vh,auto));
+   }
+   section{
+    grid-column: 2/8;
+    }
+   main section:nth-child(1){
+    grid-row: 1;
+    height: 60vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    transform: translateY(-10%);
+   }
+   main section:nth-child(2){
+    grid-row: 3;
+    display: flex;
+    flex: 1;
+    align-items: center;
+   }
+   main section:nth-child(3){
+    grid-row: 5;
+    display: flex;
+    flex: 1;
+    align-items: center;
+   }
+   main section:nth-child(4){
+    grid-row: 7;
+    display: flex;
+    flex: 1;
+    align-items: center;
+   }
+ } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 /* ------------------------ end of Large screens ----------------------------------*/
 /* ------------------------ XLarge screens ----------------------------------*/
 @media only screen and (min-width: 90.063em) {
-    html {
-      padding:0 15%;
-     }
-   } /* min-width 1441px, xlarge screens */
-
+  .fixed li{
+    padding: 8px 0 8px 26.5%;
+  }
+  #Gallery a img{
+    width: 160px;
+    height: 160px;
+  }
+  html {
+    padding:0 15%;
+   }
+  main{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(9,minmax(20vh,auto));
+  }
+  section{
+   grid-column: 2/8;
+  }
+  main section:nth-child(1){
+   grid-row: 1;
+   height: 60vh;
+   display: flex;
+   flex: 1;
+   align-items: center;
+   transform: translateY(-10%);
+  }
+  main section:nth-child(2){
+   grid-row: 3;
+   display: flex;
+   flex: 1;
+   align-items: center;
+  }
+  main section:nth-child(3){
+   grid-row: 5;
+   display: flex;
+   flex: 1;
+   align-items: center;
+  }
+  main section:nth-child(4){
+   grid-row: 7;
+   display: flex;
+   flex: 1;
+   align-items: center;
+  }/* min-width 1441px, xlarge screens */
+}
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
-    html {
-      padding:0 20%;
-    }
-    body {
-       font-size:125%;
-    }
-   } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+  html {
+    padding:0 20%;
+  }
+  .fixed li{
+    padding: 8px 0 8px 26.5%;
+  }
+  #Gallery a img{
+    width: 160px;
+    height: 160px;
+  }
+  body {
+     font-size:125%;
+  }
+  html {
+      padding:0 15%;
+  }
+  main{
+     display: grid;
+     grid-template-columns: repeat(8,1fr);
+     grid-template-rows: repeat(9,minmax(20vh,auto));
+  }
+  section{
+     grid-column: 2/8;
+  }
+  main section:nth-child(1){
+     grid-row: 1;
+     height: 60vh;
+     display: flex;
+     flex: 1;
+     align-items: center;
+     transform: translateY(-10%);
+  }
+  main section:nth-child(2){
+     grid-row: 3;
+     display: flex;
+     flex: 1;
+     align-items: center;
+  }
+  main section:nth-child(3){
+     grid-row: 5;
+     display: flex;
+     flex: 1;
+     align-items: center;
+  }
+  main section:nth-child(4){
+     grid-row: 7;
+     display: flex;
+     flex: 1;
+     align-items: center;
+  }/* min-width 1441px, xlarge screens */
+ } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 /* ------------------------ end of XLarge screens ----------------------------------*/
 /* ------------------------ XXLarge screens ----------------------------------*/
 @media only screen and (min-width: 120.063em) {
     html {
        padding:0 20%;
     }
+    .fixed li{
+      padding: 8px 0 8px 26.5%;
+    }
+    #Gallery a img{
+      width: 160px;
+      height: 160px;
+    }
+      html {
+        padding:0 15%;
+     }
+     main{
+       display: grid;
+       grid-template-columns: repeat(8,1fr);
+       grid-template-rows: repeat(9,minmax(20vh,auto));
+     }
+     section{
+       grid-column: 2/8;
+     }
+     main section:nth-child(1){
+       grid-row: 1;
+       height: 60vh;
+       display: flex;
+       flex: 1;
+       align-items: center;
+       transform: translateY(-10%);
+     }
+     main section:nth-child(2){
+       grid-row: 3;
+       display: flex;
+       flex: 1;
+       align-items: center;
+     }
+     main section:nth-child(3){
+       grid-row: 5;
+       display: flex;
+       flex: 1;
+       align-items: center;
+     }
+     main section:nth-child(4){
+       grid-row: 7;
+       display: flex;
+       flex: 1;
+       align-items: center;
+     }/* min-width 1441px, xlarge screens */
    } /* min-width 1921px, xxlarge screens */
 /* ------------------------ end of  XXLarge screens ----------------------------------*/
