@@ -23,16 +23,21 @@ $(document).ready(function(){
 		activeChange();
 		menuFix();
 	})
-	$('#gallery a').fancybox({
-		overlayColor: '#060',
-		overlayOpacity: .5,
-		transitionIn: 'elastic',
-		transitionOut: 'elastic',
-		easingIn: 'easeInSine',
-		easingOut: 'easeOutSine',
-		titlePosition: 'outside' ,
-		cyclic: true
-	});
+	$(".fancybox").fancybox({
+				padding: 0,
+
+				openEffect : 'elastic',
+				openSpeed  : 150,
+
+				closeEffect : 'elastic',
+				closeSpeed  : 150,
+
+				closeClick : true,
+
+				helpers : {
+					'background' : 'rgba(0,0,0,0.85)'
+				}
+			});
 });
 
 
