@@ -125,6 +125,7 @@ body{
   color: SeaShell;
   font-family: 'Poppins', sans-serif;
   max-width: 1000px;
+  margin: 0 auto;
 }
 main{
   display: grid;
@@ -390,7 +391,17 @@ html::-webkit-scrollbar-thumb
   .fixed{
     position: fixed;
     top: 0px;
-    width: 100%;
+    animation: width 1s ease-in-out;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes width {
+    from  {
+      width: 81%;
+    }
+    to {
+      width: 100%;
+    }
   }
   #Gallery a img{
     width: 160px;
@@ -431,11 +442,11 @@ html::-webkit-scrollbar-thumb
     align-items: center;
   }
   footer a[href*="mail"]{
-    margin-right: 30%;
+    margin-right: 22%;
   }
   footer a[href*="http"]{
 
-    margin-left: 30%;
+    margin-left: 22%;
   }
  } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 /* ------------------------ end of Medium screens ----------------------------------*/
@@ -485,6 +496,13 @@ html::-webkit-scrollbar-thumb
       flex: 1;
       align-items: center;
      }
+     footer a[href*="mail"]{
+       margin-right: 22%;
+     }
+     footer a[href*="http"]{
+
+       margin-left: 22%;
+     }
  } /* min-width 1025px, large screens */
 
 @media only screen and (min-width: 64.063em) and (max-width: 90em) {
@@ -494,6 +512,20 @@ html::-webkit-scrollbar-thumb
     }
     .fixed li{
       padding: 8px 0 8px 26.5%;
+    }
+    .fixed{
+      position: fixed;
+      top: 0px;
+      animation: width 1s ease-in-out;
+      animation-iteration-count: 1;
+    }
+    @keyframes width {
+      from  {
+        width: 57%;
+      }
+      to {
+        width: 100%;
+      }
     }
    body {
     font-size:110%;
@@ -532,6 +564,12 @@ html::-webkit-scrollbar-thumb
     flex: 1;
     align-items: center;
    }
+   footer a[href*="mail"]{
+     margin-right: 22%;
+   }
+   footer a[href*="http"]{
+     margin-left: 22%;
+   }
  } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 /* ------------------------ end of Large screens ----------------------------------*/
 /* ------------------------ XLarge screens ----------------------------------*/
@@ -542,6 +580,20 @@ html::-webkit-scrollbar-thumb
   #Gallery a img{
     width: 160px;
     height: 160px;
+  }
+  .fixed{
+    position: fixed;
+    top: 0px;
+    animation: width 1s ease-in-out;
+    animation-iteration-count: 1;
+  }
+  @keyframes width {
+    from  {
+      width: 57%;
+    }
+    to {
+      width: 100%;
+    }
   }
   html {
     padding:0 15%;
@@ -574,16 +626,37 @@ html::-webkit-scrollbar-thumb
    flex: 1;
    align-items: center;
   }
+  footer a[href*="mail"]{
+    margin-right: 22%;
+  }
+  footer a[href*="http"]{
+    margin-left: 22%;
+  }
   main section:nth-child(4){
    grid-row: 7;
    display: flex;
    flex: 1;
    align-items: center;
   }/* min-width 1441px, xlarge screens */
+
 }
 @media only screen and (min-width: 90.063em) and (max-width: 120em) {
   html {
     padding:0 20%;
+  }
+  .fixed{
+    position: fixed;
+    top: 0px;
+    animation: width 1s ease-in-out;
+    animation-iteration-count: 1;
+  }
+  @keyframes width {
+    from  {
+      width: 57%;
+    }
+    to {
+      width: 100%;
+    }
   }
   .fixed li{
     padding: 8px 0 8px 26.5%;
@@ -631,6 +704,12 @@ html::-webkit-scrollbar-thumb
      display: flex;
      flex: 1;
      align-items: center;
+  }
+  footer a[href*="mail"]{
+    margin-right: 22%;
+  }
+  footer a[href*="http"]{
+    margin-left: 22%;
   }/* min-width 1441px, xlarge screens */
  } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 /* ------------------------ end of XLarge screens ----------------------------------*/
@@ -640,7 +719,21 @@ html::-webkit-scrollbar-thumb
        padding:0 20%;
     }
     .fixed li{
-      padding: 8px 0 8px 26.5%;
+      padding: 8px 0 8px 31%;
+    }
+    .fixed{
+      position: fixed;
+      top: 0px;
+      animation: width 1s ease-in-out;
+      animation-iteration-count: 1;
+    }
+    @keyframes width {
+      from  {
+        width: 46%;
+      }
+      to {
+        width: 100%;
+      }
     }
     #Gallery a img{
       width: 160px;
@@ -682,6 +775,12 @@ html::-webkit-scrollbar-thumb
        display: flex;
        flex: 1;
        align-items: center;
+     }
+     footer a[href*="mail"]{
+       margin-right: 22%;
+     }
+     footer a[href*="http"]{
+       margin-left: 22%;
      }/* min-width 1441px, xlarge screens */
    } /* min-width 1921px, xxlarge screens */
 /* ------------------------ end of  XXLarge screens ----------------------------------*/
