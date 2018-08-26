@@ -19,6 +19,13 @@ a:any-link {
   color: SeaShell;
 
 }
+
+abbr{
+  text-decoration: underline;
+  text-decoration-color: #e0436a;
+  color: #e0436a;
+}
+
 /* --------------- end of anchor styling -------------------------*/
 /* -------------- generic styling ------------------------*/
 *{
