@@ -32,6 +32,12 @@ html{
   scroll-behavior: smooth;
   line-height: 1.5;
 }
+.projects{
+  width: 100vw;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+}
 .shutter{
   background: -webkit-linear-gradient(80deg, DeepSkyBlue, DarkBlue) no-repeat;
   background: -webkit-gradient(linear, 80deg, DeepSkyBlue, DarkBlue) no-repeat;
@@ -47,7 +53,6 @@ html{
   z-index: 41;
   background-attachment: fixed;
 }
-
 #Character{
   position: absolute;
   left: 50%;
@@ -80,15 +85,15 @@ nav{
   margin-top: 20px;
   position: relative;
 }
-li{
+.navbar li{
   background: #e0436a;
   padding: 8px 0 8px 10%;
   margin: -1px;
 }
-li:nth-child(1){
+.navbar li:nth-child(1){
   border-radius: 7px 7px 0 0;
 }
-li:nth-last-child(2){
+.navbar li:nth-last-child(2){
   border-radius: 0 0 7px 7px;
 }
 .navigation{
@@ -102,7 +107,37 @@ li:nth-last-child(2){
   top: 0px;
   width: 100%;
 }
-ul{
+.listOfProjects{
+  list-style-type: none;
+  margin-top: 20px;
+}
+.listOfProjects li {
+  padding-left: 20px;
+  background: linear-gradient(60deg, rgba(255,255,255,0.4) , rgba(255,255,255,0) 35%);
+  background-size: 200% 200%;
+  background-position: 40% 0%;
+  border-left: 5px solid #e0436a;
+  margin: 10px 0;
+}
+.listOfProjects li:hover {
+  animation: Gradient 3s ease-in-out infinite;
+}
+.listOfProjects a+p {
+  padding-left: 20px;
+}
+@keyframes Gradient {
+  0% {
+		background-position: 40% 0%
+	}
+	50% {
+		background-position: 10% 0%
+	}
+	100% {
+		background-position: 40% 0%
+	}
+}
+
+nav ul{
   list-style-type: none;
   height: auto;
   z-index: 2;
@@ -301,6 +336,45 @@ html::-webkit-scrollbar-thumb
 @media only screen {
   body{
     padding: 10% 5%;
+  }
+  h1{
+    padding-bottom: 30px;
+  }
+  body{
+    padding: 10% 5%;
+  }
+  main{
+    padding: 0 5%;
+  }
+  main section:nth-child(1){
+    grid-row: 1;
+    height: 60vh;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    transform: translateY(-10%);
+  }
+  main section:nth-child(2){
+    grid-row: 3;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  main section:nth-child(3){
+    grid-row: 5;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  main section:nth-child(4){
+    grid-row: 7;
+    display: flex;
+    flex: 1;
+    align-items: center;
+  }
+  #Gallery a img{
+    width: 70px;
+    height: 70px;
   }
 } /* Define mobile styles */
 
@@ -565,10 +639,10 @@ html::-webkit-scrollbar-thumb
     align-items: center;
    }
    footer a[href*="mail"]{
-     margin-right: 22%;
+     margin-right: 28%;
    }
    footer a[href*="http"]{
-     margin-left: 22%;
+     margin-left: 28%;
    }
  } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
 /* ------------------------ end of Large screens ----------------------------------*/
@@ -659,7 +733,7 @@ html::-webkit-scrollbar-thumb
     }
   }
   .fixed li{
-    padding: 8px 0 8px 26.5%;
+    padding: 8px 0 8px 28.5%;
   }
   #Gallery a img{
     width: 160px;
@@ -706,10 +780,10 @@ html::-webkit-scrollbar-thumb
      align-items: center;
   }
   footer a[href*="mail"]{
-    margin-right: 22%;
+    margin-right: 28%;
   }
   footer a[href*="http"]{
-    margin-left: 22%;
+    margin-left: 28%;
   }/* min-width 1441px, xlarge screens */
  } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 /* ------------------------ end of XLarge screens ----------------------------------*/

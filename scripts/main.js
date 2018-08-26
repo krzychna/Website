@@ -4,7 +4,7 @@ var letter = 0;
 var full = 0;
 $(document).ready(function(){
 	hideMenu();
-	$('#Character').animate({top:'0%'}, 2000);
+	$('#Character').animate({top:'0%'}, 1000);
 	setTimeout(function(){
 	full = setInterval(typeWrite, 40);
 }, 2000)
@@ -58,15 +58,15 @@ function typeWrite(){
 
 function menuFix(){
 	if ($(window).scrollTop() > $('nav').offset().top - 10) {
-		$('ul').addClass('fixed');
+		$('nav ul').addClass('fixed');
 	}else {
-		$('ul').removeClass('fixed')
+		$('nav ul').removeClass('fixed')
 	}
 }
 
 function navigation(){
 	$('#hamburger').toggleClass('open');
-	$('li').each(function(){
+	$('nav ul li').each(function(){
 		if(!($(this).hasClass('active'))){
 			$(this).slideToggle('fast', function(){
 				$(this).removeClass('navigation')
@@ -76,7 +76,7 @@ function navigation(){
 }
 
 function hideMenu(){
-	$('li').each(function(){
+	$('nav ul li').each(function(){
 		if(!($(this).hasClass('active'))){
 			$(this).slideUp("fast");
 		}else {
