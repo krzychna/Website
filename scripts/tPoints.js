@@ -55,7 +55,7 @@ Particle.prototype.reach = function(){
 
 Particle.prototype.status = function(a){
   push();
-  if(mouseX > 200 || mouseY > 350){
+  if( (mouseX > 200 || mouseY > 350) && mouseX < windowWidth && mouseX > 0 && mouseY < windowHeight && mouseY > 0){
     stroke(255,0,0);
     this.vel.limit(25);
     this.mag = 10;
