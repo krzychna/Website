@@ -787,10 +787,10 @@ html::-webkit-scrollbar-thumb
      align-items: center;
   }
   footer a[href*="mail"]{
-    margin-right: 28%;
+    margin-right: 28.5%;
   }
   footer a[href*="http"]{
-    margin-left: 28%;
+    margin-left: 28.5%;
   }/* min-width 1441px, xlarge screens */
  } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
 /* ------------------------ end of XLarge screens ----------------------------------*/
