@@ -30,10 +30,10 @@ Particle.prototype.draw = function(w,r,g,b){
   point(this.location.x,this.location.y);
 };
 
-Particle.prototype.behave = function(w,r,g,b,a){
+Particle.prototype.behave = function(w,r,g,b,v){
   this.distance();
   this.draw(w,r,g,b);
-  this.status(a);
+  this.status(v);
   this.reach();
   this.update();
 };
@@ -53,29 +53,18 @@ Particle.prototype.reach = function(){
   pop();
 };
 
-Particle.prototype.status = function(a){
+Particle.prototype.status = function(v){
   push();
-  if( (mouseX > 200 || mouseY > 350) && mouseX < windowWidth && mouseX > 0 && mouseY < windowHeight && mouseY > 0){
+  if( (mouseX > 220 || mouseY > 500) && mouseX < windowWidth && mouseX > 0 && mouseY < windowHeight && mouseY > 0){
     stroke(255,0,0);
-    this.vel.limit(25);
-    this.mag = 10;
+    this.vel.limit(v);
     this.target.x = mouseX;
     this.target.y = mouseY;
     this.comeBack = false;
   }else {
-  //   stroke(255,255,255);
-  //   console.log('co to jest');
-  //   if(this.location.dist(this.target) < 150){
-  //     this.vel.limit(6);
-  //     this.mag = 4;
-  //   }else if(this.location.dist(this.target) < 75){
-  //     this.vel.limit(0.2);
-  //     this.mag = 0.05;
-  //   }
     this.target.x = this.base.x;
     this.target.y = this.base.y;
     this.comeBack = true;
-  //
   }
   pop();
 };
