@@ -2,28 +2,27 @@
 var font;
 var textDot;
 var dots =[];
-var canv,strokeDrop,colR,colG,colB,strokeSlider,ranText,inpText, tail,v;
+var canv,strokeDrop,colR,colG,colB,strokeSlider,ranText,inpText,v;
 function preload(){
   font = loadFont('Titillium_Web/TitilliumWeb-Light.ttf');
 }
 
 function setup(){
-  tail = 0.45;
   canv = createCanvas(windowWidth,windowHeight);
   canv.position(0,0);
-  strokeSlider = createSlider(1,7,3,0.1);
+  strokeSlider = createSlider(1,7,1.9,0.1);
   strokeSlider.position(10,30);
   ranText = createInput('');
   ranText.position(10,360);
-  colR = createSlider(0,255,255,1);
+  colR = createSlider(0,255,0,1);
   colR.position(10,80);
   colG = createSlider(0,255,0,1);
   colG.position(10,130);
-  colB = createSlider(0,255,0,1);
+  colB = createSlider(0,255,67,1);
   colB.position(10,180);
-  tail = createSlider(0,1,0.5,0.01);
+  tail = createSlider(0,1,0.3,0.01);
   tail.position(10,230);
-  v = createSlider(0.5,50,10,0.5);
+  v = createSlider(0.5,50,11,0.5);
   v.position(10,280);
   background(255);
   inpText = 'Krzysztof Nowaks portfolio';
