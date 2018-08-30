@@ -1,0 +1,303 @@
+:root{
+  --radius: 10px;
+  --cRadius: 100px;
+  --rotTime: 1s;
+  --mult: 40;
+}
+body{
+  background: SeaShell;
+  font-family: 'Poppins', sans-serif;
+}
+.difTime{
+  display: flex;
+  flex: 8 100px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.circle{
+  content: '';
+  height: var(--cRadius);
+  width: var(--cRadius);
+  border-radius: 50%;
+  position: absolute;
+  top: 20px;
+  left: calc(50% - var(--cRadius)/2);
+}
+.container1,.container2,.container3,.container4,.container5,.container6,.container7,.container8,.container9{
+  width: var(--cRadius);
+  height: auto;
+  flex: 1;
+  display: block;
+  position: relative;
+}
+p{
+  text-align: center;
+}
+.difTime  p{
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,calc(var(--cRadius)/2));
+}
+
+.dot{
+  width: var(--radius);
+  height: var(--radius);
+  position: absolute;
+  top: -10px;
+  left: calc(50% - var(--radius)/2);
+  background: red;
+  border-radius: 20%;
+  animation: move 20s ease-in-out infinite;
+}
+
+@keyframes rotR {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotL {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
+}
+@keyframes move {
+  0%,20%,40%,60%,80%,100%{
+    transform: translateY(0px);
+    border-radius: 50%;
+  }
+  10%,30%,50%,70%,90%{
+    transform: translateY(120px);
+    border-radius: 0%;
+  }
+}
+
+.container1 > .circle:nth-child(1){
+  animation: rotR var(--rotTime) linear infinite;
+}
+.container1 > .circle:nth-child(3){
+  animation: rotR var(--rotTime) linear infinite 2s;
+}
+.container1 > .circle:nth-child(5){
+  animation: rotR var(--rotTime) linear infinite 4s;
+}
+.container1 > .circle:nth-child(7){
+  animation: rotR var(--rotTime) linear infinite 6s;
+}
+.container1 > .circle:nth-child(2){
+  animation: rotL var(--rotTime) linear infinite;
+}
+.container1 > .circle:nth-child(4){
+  animation: rotL var(--rotTime) linear infinite 2s;
+}
+.container1 > .circle:nth-child(6){
+  animation: rotL var(--rotTime) linear infinite 4s;
+}
+.container1 > .circle:nth-child(8){
+  animation: rotL var(--rotTime) linear infinite 6s;
+}
+
+.container2 > .circle:nth-child(1){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite;
+}
+.container2 > .circle:nth-child(3){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite 2s;
+}
+.container2 > .circle:nth-child(5){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite 4s;
+}
+.container2 > .circle:nth-child(7){
+  animation: rotR calc(1.2*var(--rotTime)) linear infinite 6s;
+}
+.container2 > .circle:nth-child(2){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite;
+}
+.container2 > .circle:nth-child(4){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite 2s;
+}
+.container2 > .circle:nth-child(6){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite 4s;
+}
+.container2 > .circle:nth-child(8){
+  animation: rotL calc(1.2*var(--rotTime)) linear infinite 6s;
+}
+
+.container3 > .circle:nth-child(1){
+  animation: rotR calc(2*var(--rotTime)) linear infinite;
+}
+.container3 > .circle:nth-child(3){
+  animation: rotR calc(2*var(--rotTime)) linear infinite 2s;
+}
+.container3 > .circle:nth-child(5){
+  animation: rotR calc(2*var(--rotTime)) linear infinite 4s;
+}
+.container3 > .circle:nth-child(7){
+  animation: rotR calc(2*var(--rotTime)) linear infinite 6s;
+}
+.container3 > .circle:nth-child(2){
+  animation: rotL calc(2*var(--rotTime)) linear infinite;
+}
+.container3 > .circle:nth-child(4){
+  animation: rotL calc(2*var(--rotTime)) linear infinite 2s;
+}
+.container3 > .circle:nth-child(6){
+  animation: rotL calc(2*var(--rotTime)) linear infinite 4s;
+}
+.container3 > .circle:nth-child(8){
+  animation: rotL calc(2*var(--rotTime)) linear infinite 6s;
+}
+
+.container4 > .circle:nth-child(1){
+  animation: rotR calc(4*var(--rotTime)) linear infinite;
+}
+.container4 > .circle:nth-child(3){
+  animation: rotR calc(4*var(--rotTime)) linear infinite 2s;
+}
+.container4 > .circle:nth-child(5){
+  animation: rotR calc(4*var(--rotTime)) linear infinite 4s;
+}
+.container4 > .circle:nth-child(7){
+  animation: rotR calc(4*var(--rotTime)) linear infinite 6s;
+}
+.container4 > .circle:nth-child(2){
+  animation: rotL calc(4*var(--rotTime)) linear infinite;
+}
+.container4 > .circle:nth-child(4){
+  animation: rotL calc(4*var(--rotTime)) linear infinite 2s;
+}
+.container4 > .circle:nth-child(6){
+  animation: rotL calc(4*var(--rotTime)) linear infinite 4s;
+}
+.container4 > .circle:nth-child(8){
+  animation: rotL calc(4*var(--rotTime)) linear infinite 6s;
+}
+
+.container5 > .circle:nth-child(1){
+  animation: rotR calc(8*var(--rotTime)) linear infinite;
+}
+.container5 > .circle:nth-child(3){
+  animation: rotR calc(8*var(--rotTime)) linear infinite 2s;
+}
+.container5 > .circle:nth-child(5){
+  animation: rotR calc(8*var(--rotTime)) linear infinite 4s;
+}
+.container5 > .circle:nth-child(7){
+  animation: rotR calc(8*var(--rotTime)) linear infinite 6s;
+}
+.container5 > .circle:nth-child(2){
+  animation: rotL calc(8*var(--rotTime)) linear infinite;
+}
+.container5 > .circle:nth-child(4){
+  animation: rotL calc(8*var(--rotTime)) linear infinite 2s;
+}
+.container5 > .circle:nth-child(6){
+  animation: rotL calc(8*var(--rotTime)) linear infinite 4s;
+}
+.container5 > .circle:nth-child(8){
+  animation: rotL calc(8*var(--rotTime)) linear infinite 6s;
+}
+
+.container6 > .circle:nth-child(1){
+  animation: rotR calc(10*var(--rotTime)) linear infinite;
+}
+.container6 > .circle:nth-child(3){
+  animation: rotR calc(10*var(--rotTime)) linear infinite 2s;
+}
+.container6 > .circle:nth-child(5){
+  animation: rotR calc(10*var(--rotTime)) linear infinite 4s;
+}
+.container6 > .circle:nth-child(7){
+  animation: rotR calc(10*var(--rotTime)) linear infinite 6s;
+}
+.container6 > .circle:nth-child(2){
+  animation: rotL calc(10*var(--rotTime)) linear infinite;
+}
+.container6 > .circle:nth-child(4){
+  animation: rotL calc(10*var(--rotTime)) linear infinite 2s;
+}
+.container6 > .circle:nth-child(6){
+  animation: rotL calc(10*var(--rotTime)) linear infinite 4s;
+}
+.container6 > .circle:nth-child(8){
+  animation: rotL calc(10*var(--rotTime)) linear infinite 6s;
+}
+
+.container7 > .circle:nth-child(1){
+  animation: rotR calc(20*var(--rotTime)) linear infinite;
+}
+.container7 > .circle:nth-child(3){
+  animation: rotR calc(20*var(--rotTime)) linear infinite 2s;
+}
+.container7 > .circle:nth-child(5){
+  animation: rotR calc(20*var(--rotTime)) linear infinite 4s;
+}
+.container7 > .circle:nth-child(7){
+  animation: rotR calc(20*var(--rotTime)) linear infinite 6s;
+}
+.container7 > .circle:nth-child(2){
+  animation: rotL calc(20*var(--rotTime)) linear infinite;
+}
+.container7 > .circle:nth-child(4){
+  animation: rotL calc(20*var(--rotTime)) linear infinite 2s;
+}
+.container7 > .circle:nth-child(6){
+  animation: rotL calc(20*var(--rotTime)) linear infinite 4s;
+}
+.container7 > .circle:nth-child(8){
+  animation: rotL calc(20*var(--rotTime)) linear infinite 6s;
+}
+
+.container8 > .circle:nth-child(1){
+  animation: rotR calc(30*var(--rotTime)) linear infinite;
+}
+.container8 > .circle:nth-child(3){
+  animation: rotR calc(30*var(--rotTime)) linear infinite 2s;
+}
+.container8 > .circle:nth-child(5){
+  animation: rotR calc(30*var(--rotTime)) linear infinite 4s;
+}
+.container8 > .circle:nth-child(7){
+  animation: rotR calc(30*var(--rotTime)) linear infinite 6s;
+}
+.container8 > .circle:nth-child(2){
+  animation: rotL calc(30*var(--rotTime)) linear infinite;
+}
+.container8 > .circle:nth-child(4){
+  animation: rotL calc(30*var(--rotTime)) linear infinite 2s;
+}
+.container8 > .circle:nth-child(6){
+  animation: rotL calc(30*var(--rotTime)) linear infinite 4s;
+}
+.container8 > .circle:nth-child(8){
+  animation: rotL calc(30*var(--rotTime)) linear infinite 6s;
+}
+
+.container9 > .circle:nth-child(1){
+  animation: rotR calc(40*var(--rotTime)) linear infinite;
+}
+.container9 > .circle:nth-child(3){
+  animation: rotR calc(40*var(--rotTime)) linear infinite 2s;
+}
+.container9 > .circle:nth-child(5){
+  animation: rotR calc(40*var(--rotTime)) linear infinite 4s;
+}
+.container9 > .circle:nth-child(7){
+  animation: rotR calc(40*var(--rotTime)) linear infinite 6s;
+}
+.container9 > .circle:nth-child(2){
+  animation: rotL calc(40*var(--rotTime)) linear infinite;
+}
+.container9 > .circle:nth-child(4){
+  animation: rotL calc(40*var(--rotTime)) linear infinite 2s;
+}
+.container9 > .circle:nth-child(6){
+  animation: rotL calc(40*var(--rotTime)) linear infinite 4s;
+}
+.container9 > .circle:nth-child(8){
+  animation: rotL calc(40*var(--rotTime)) linear infinite 6s;
+}
