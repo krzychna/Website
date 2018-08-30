@@ -109,6 +109,9 @@ p{
   grid-column: 1;
   grid-row: 5;
 }
+.difTime > * > .circle:first-child {
+  border-bottom: 1px solid black;
+}
 
 .container1 > .circle:nth-child(1){
   animation: rotR var(--rotTime) linear infinite;
