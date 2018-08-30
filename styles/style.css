@@ -114,11 +114,11 @@ nav{
   top: 0px;
   width: 100%;
 }
-.listOfProjects{
+.listofprojects{
   list-style-type: none;
   margin-top: 20px;
 }
-.listOfProjects li {
+.listofprojects li {
   padding-left: 20px;
   background: linear-gradient(60deg, rgba(255,255,255,0.4) , rgba(255,255,255,0) 35%);
   background-size: 200% 200%;
@@ -126,10 +126,10 @@ nav{
   border-left: 5px solid #e0436a;
   margin: 10px 0;
 }
-.listOfProjects li:hover {
+.listofprojects li:hover {
   animation: Gradient 3s ease-in-out infinite;
 }
-.listOfProjects a+p {
+.listofprojects a+p {
   padding-left: 20px;
 }
 @keyframes Gradient {

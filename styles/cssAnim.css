@@ -5,14 +5,16 @@
   --mult: 40;
 }
 body{
+  margin: 50px auto;
   background: SeaShell;
   font-family: 'Poppins', sans-serif;
+  height: auto;
 }
 .difTime{
-  display: flex;
-  flex: 8 100px;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  padding: 50px 0;
+  display: grid;
+  grid-template-columns: repeat(2,minmax(150px,auto));
+  grid-template-rows: repeat(5,minmax(150px,auto));
 }
 .circle{
   content: '';
@@ -24,19 +26,16 @@ body{
   left: calc(50% - var(--cRadius)/2);
 }
 .container1,.container2,.container3,.container4,.container5,.container6,.container7,.container8,.container9{
-  width: var(--cRadius);
-  height: auto;
-  flex: 1;
-  display: block;
   position: relative;
 }
 p{
+  margin: 0 auto;
   text-align: center;
 }
 .difTime  p{
   position: absolute;
   left: 50%;
-  transform: translate(-50%,calc(var(--cRadius)/2));
+  transform: translate(-50%,calc(75px - 50%));
 }
 
 .dot{
@@ -75,6 +74,40 @@ p{
     transform: translateY(120px);
     border-radius: 0%;
   }
+}
+.container1{
+  grid-column: 1;
+}
+.container2{
+  grid-column: 2;
+}
+.container3{
+  grid-column: 1;
+  grid-row: 2;
+}
+.container4{
+  grid-column: 2;
+  grid-row: 2;
+}
+.container5{
+  grid-column: 1;
+  grid-row: 3;
+}
+.container6{
+  grid-column: 2;
+  grid-row: 3;
+}
+.container7{
+  grid-column: 1;
+  grid-row: 4;
+}
+.container8{
+  grid-column: 2;
+  grid-row: 4;
+}
+.container9{
+  grid-column: 1;
+  grid-row: 5;
 }
 
 .container1 > .circle:nth-child(1){
@@ -301,3 +334,162 @@ p{
 .container9 > .circle:nth-child(8){
   animation: rotL calc(40*var(--rotTime)) linear infinite 6s;
 }
+
+
+@media only screen {
+} /* Define mobile styles */
+
+@media only screen and (max-width: 40em) {
+ } /* max-width 640px, mobile-only styles, use when QAing mobile issues */
+/* ------------------------ end of Small screens ----------------------------*/
+/* ------------------------ Medium screens ----------------------------------*/
+@media only screen and (min-width: 40.063em) {
+
+ } /* min-width 641px, medium screens */
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+  .difTime{
+    display: grid;
+    grid-template-columns: repeat(4,minmax(150px,auto));
+    grid-template-rows: repeat(3,minmax(150px,auto));
+  }
+  .container1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container2{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container3{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container4{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .container5{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container6{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container7{
+    grid-column: 3;
+    grid-row: 2;
+  }
+  .container8{
+    grid-column: 4;
+    grid-row: 2;
+  }
+  .container9{
+    grid-column: 1;
+    grid-row: 3;
+  }
+ } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+/* ------------------------ end of Medium screens ----------------------------------*/
+/* ------------------------ Large screens ----------------------------------*/
+@media only screen and (min-width: 64.063em) {
+
+ } /* min-width 1025px, large screens */
+
+@media only screen and (min-width: 64.063em) and (max-width: 90em) {
+  .difTime{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(150px,auto));
+    grid-template-rows: repeat(2,minmax(150px,auto));
+  }
+  .container1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container2{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container3{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container4{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .container5{
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .container6{
+    grid-column: 6;
+    grid-row: 1;
+  }
+  .container7{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container8{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container9{
+    grid-column: 3;
+    grid-row: 2;
+  }
+ } /* min-width 1025px and max-width 1440px, use when QAing large screen-only issues */
+/* ------------------------ end of Large screens ----------------------------------*/
+/* ------------------------ XLarge screens ----------------------------------*/
+@media only screen and (min-width: 90.063em) {
+  .difTime{
+    display: grid;
+    grid-template-columns: repeat(6,minmax(150px,auto));
+    grid-template-rows: repeat(2,minmax(150px,auto));
+  }
+  .container1{
+    grid-column: 1;
+    grid-row: 1;
+  }
+  .container2{
+    grid-column: 2;
+    grid-row: 1;
+  }
+  .container3{
+    grid-column: 3;
+    grid-row: 1;
+  }
+  .container4{
+    grid-column: 4;
+    grid-row: 1;
+  }
+  .container5{
+    grid-column: 5;
+    grid-row: 1;
+  }
+  .container6{
+    grid-column: 6;
+    grid-row: 1;
+  }
+  .container7{
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .container8{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .container9{
+    grid-column: 3;
+    grid-row: 2;
+  }
+}
+@media only screen and (min-width: 90.063em) and (max-width: 120em) {
+
+ } /* min-width 1441px and max-width 1920px, use when QAing xlarge screen-only issues */
+/* ------------------------ end of XLarge screens ----------------------------------*/
+/* ------------------------ XXLarge screens ----------------------------------*/
+@media only screen and (min-width: 120.063em) {
+
+   } /* min-width 1921px, xxlarge screens */
+*/
