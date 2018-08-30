@@ -2,8 +2,11 @@
   --radius: 10px;
   --cRadius: 100px;
   --rotTime: 1s;
-  --mult: 40;
 }
+html{
+  box-sizing: border-box;
+}
+
 body{
   margin: 50px auto;
   background: SeaShell;

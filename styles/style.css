@@ -278,14 +278,23 @@ footer a[href*="http"]{
   left: 100%;
   opacity: 0;
 }
+
+#Arrow{
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  left: 50%;
+  bottom: 5px;
+  transform: translate(-50%);
+  cursor: pointer;
+  z-index: 1;
+}
 .arrow1, .arrow2{
   position: fixed;
   width: 30px;
   height: 30px;
   left: 50%;
   bottom: 10px;
-  z-index: 1;
-  cursor: pointer;
 }
 .arrow1{
   animation: move 2s infinite ease-in;
