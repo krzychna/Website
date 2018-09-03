@@ -13,103 +13,102 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
     <link rel="icon" href="images/favicon.ico">
     <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
-  <script src="scripts/fancybox/lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
-  <script src="scripts/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  <link rel="stylesheet" type="text/css" href="scripts/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-  <link rel="stylesheet" type="text/css" href="scripts/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-  <script src="scripts/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-  <link rel="stylesheet" type="text/css" href="scripts/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
-  <script src="scripts/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-  <script src="scripts/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="scripts/fancybox/lib/jquery.mousewheel.pack.js?v=3.1.3"></script>
+    <script src="scripts/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+    <script src="scripts/fancybox/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <link rel="stylesheet" type="text/css" href="scripts/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    <script src="scripts/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+    <script src="scripts/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
   </head>
   <body>
-    <div class="shutter">
-      <img id="Character" src="images/char128.gif" alt="Pixel character waving hand">
-    </div>
-    <header>
-      <h1>web developer portfolio</h1>
-    </header>
-    <nav>
-      <ul class="navbar">
-        <li class="active"><a href="#">Home</a></li>
-        <li class="navigation"><a href="#">About me</a></li>
-        <li class="navigation"><a href="#">Experience</a></li>
-        <li class="navigation"><a href="#">Projects</a></li>
-        <div id="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-      </ul>
-    </nav>
-    <main>
-      <section>
-        <article id="Home" >
-          <p id="Welcome" ></p>
+    <div class="body-wrapper body-wrapper--styling">
+      <div class="shutter">
+        <img id="Character" src="images/char128.gif" alt="Pixel character waving hand">
+      </div>
+      <header class="header__text">
+      <h1 class="header__text--styling header__text--position">web developer portfolio</h1>
+      </header>
+      <nav class="nav-pos">
+        <ul class="navbar">
+          <li class="navbar__element navbar_element--styling navbar__element--active"><a href="#">Home</a></li>
+          <li class="navbar__element navbar_element--styling navbar__element--invisible"><a href="#">About me</a></li>
+          <li class="navbar__element navbar_element--styling navbar__element--invisible"><a href="#">Experience</a></li>
+          <li class="navbar__element navbar_element--styling navbar__element--invisible"><a href="#">Projects</a></li>
+          <div class="hamburger">
+            <span class="hamburger__dash hamburger__dash--styling"></span>
+            <span class="hamburger__dash hamburger__dash--styling"></span>
+            <span class="hamburger__dash hamburger__dash--styling"></span>
+            <span class="hamburger__dash hamburger__dash--styling"></span>
+            <span class="hamburger__dash hamburger__dash--styling"></span>
+            <span class="hamburger__dash hamburger__dash--styling"></span>
+          </div>
+        </ul>
+      </nav>
+      <main class="main-layout">
+        <article id="Home">
+
         </article>
-      </section>
-      <section>
         <article id="AboutMe">
-          <h2>About me</h2>
-          <p>My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. In the project tab you will find other projects which hopefully will show you my <strong>OOP and Web Development knowledge</strong>.</p>
+          <section class="article__text">
+            <h2 class="article__title">About me</h2>
+            <p>My name is <strong>Krzysztof Nowak</strong> and I am learning to become <strong>Web Dev</strong>. I made this site from scratch and it is my main project which I am still developing. In the project tab you will find other projects which hopefully will show you my <strong>OOP and Web Development knowledge</strong>.</p>
+          </section>
         </article>
-      </section>
-      <section>
         <article id="Experience">
-          <h2>Experience</h2>
-          <p><strong>Programming</strong> is my <strong>hobby</strong> and I like it since my first contact with it. The first language which I learned was C++11, then because I
-            like to see my effects instantly I switched to Java. Now I am discovering possibilities of <strong>Web Developing</strong>.<br />
-            Knowledge of C++ helped me while I was doing my bachelor's thesis which was construction of electronic spirit level. Whole computation was calculated by Arduino Due.
-            For my master thesis I did app for Android smartphones (Java knowledge helped here). The idea was to steer wirelessly frequency converter.
-            <br />Now I am trying to find <strong>my strengths</strong> in <strong>Web Development</strong>. This is now <strong>my biggest project</strong>.<br/></p>
-            <p id="Certyficates">Certyficates:</p>
-            <div id="Gallery">
-              <a href="certyficates/html.jpg" rel="gallery" class="fancybox"><img src="certyficates/html.jpg" alt="HTML certyficate for Krzysztof Nowak" /></a>
-              <a href="certyficates/css.jpg" rel="gallery" class="fancybox"><img src="certyficates/css.jpg"  alt="CSS certyficate for Krzysztof Nowak"/></a>
-              <a href="certyficates/js.jpg" rel="gallery" class="fancybox"><img src="certyficates/js.jpg" alt="JA certyficate for Krzysztof Nowak" /></a>
-            </div>
+          <section class="article__text">
+            <h2 class="article__title">Experience</h2>
+            <p><strong>Programming</strong> is my <strong>hobby</strong> and I like it since my first contact with it. The first language which I learned was C++11, then because I
+              like to see my effects instantly I switched to Java. Now I am discovering possibilities of <strong>Web Developing</strong>.<br />
+              Knowledge of C++ helped me while I was doing my bachelor's thesis which was construction of electronic spirit level. Whole computation was calculated by Arduino Due.
+              For my master thesis I did app for Android smartphones (Java knowledge helped here). The idea was to steer wirelessly frequency converter.
+              <br />Now I am trying to find <strong>my strengths</strong> in <strong>Web Development</strong>. This is now <strong>my biggest project</strong>.<br/></p>
+              <p id="Certyficates">Certyficates:</p>
+              <div class="gallery">
+                <a href="certyficates/html.jpg" rel="gallery" class="fancybox"><img class="gallery_element" src="certyficates/html.jpg" alt="HTML certyficate for Krzysztof Nowak" /></a>
+                <a href="certyficates/css.jpg" rel="gallery" class="fancybox"><img class="gallery_element" src="certyficates/css.jpg"  alt="CSS certyficate for Krzysztof Nowak"/></a>
+                <a href="certyficates/js.jpg" rel="gallery" class="fancybox"><img class="gallery_element" src="certyficates/js.jpg" alt="JA certyficate for Krzysztof Nowak" /></a>
+              </div>
+          </section>
         </article>
-      </section>
-      <section>
         <article id="Projects">
-          <h2>Projects</h2>
-          <p>Here you will find <strong>my projects</strong><br/>
-          If you are interested in my work, you can check my <a href="https://github.com/krzychna" target="_blank"><strong>Github</strong>.</a></p>
-          <ul class="listofprojects">
-            <a href="rain.html" target="_blank"><li>Rain</li></a>
-            <p>Drawing points on canvas with p5.js library. The whole looks like rain.</p>
-            <a href="text.html" target="_blank"><li>Following text</li></a>
-            <p>Drawing text as points on periphery of font. Points follow mouse cursor. <abbr title="It is nice for the eye but unfortunately heavily loads the device. For best experience run it on PC/laptop.">* read me *</abbr></p>
-            <a href="walker.html" target="_blank"><li>Random walker</li></a>
-            <p>Point which randomly moves in Cartesian coordinate system, if it hits wall it changes color.</p>
-            <a href="tictactoe.html" target="_blank"><li>Tic tac toe</li></a>
-            <p>Simple tic tac toe game.</p>
-            <a href="cssAnim.html" target="_blank"><li>CSS animations</li></a>
-            <p>Just HTML and CSS!</p>
-          </ul>
+          <section class="article__text">
+            <h2 class="article__title">Projects</h2>
+            <p>Here you will find <strong>my projects</strong><br/>
+            If you are interested in my work, you can check my <a href="https://github.com/krzychna" target="_blank"><strong>Github</strong>.</a></p>
+            <ul class="list-of-projects">
+              <a href="rain.html" target="_blank"><li class="list-of-projects__element list-of-projects__element--styling"><h3>Rain</h3></li></a>
+              <p class="list-of-projects__element__description">Drawing points on canvas with p5.js library. The whole looks like rain.</p>
+              <a href="text.html" target="_blank"><li class="list-of-projects__element list-of-projects__element--styling"><h3>Following text</h3></li></a>
+              <p class="list-of-projects__element__description">Drawing text as points on periphery of font. Points follow mouse cursor. <!--<abbr title="It is nice for the eye but unfortunately heavily loads the device. For best experience run it on PC/laptop.">* read me *</abbr> --></p>
+              <a href="walker.html" target="_blank"><li class="list-of-projects__element list-of-projects__element--styling"><h3>Random walker</h3></li></a>
+              <p class="list-of-projects__element__description">Point which randomly moves in Cartesian coordinate system, if it hits wall it changes color.</p>
+              <a href="tictactoe.html" target="_blank"><li class="list-of-projects__element list-of-projects__element--styling"><h3>Tic tac toe</h3></li></a>
+              <p class="list-of-projects__element__description">Simple tic tac toe game.</p>
+              <a href="cssAnim.html" target="_blank"><li class="list-of-projects__element list-of-projects__element--styling"><h3>CSS animations</h3></li></a>
+              <p class="list-of-projects__element__description">Just HTML and CSS!</p>
+            </ul>
+          </section>
         </article>
-      </section>
-      <div id="Arrow">
-        <div class="arrow1">
-          <span></span>
-          <span></span>
+      </main>
+      <footer class="footer footer--styling"><a  class="footer__element" href="mailto:krzysztofn1993@gmail.com"><img  src="#" id="mail" /></a>
+      <a class="footer__element" target="_blank" href="https://www.linkedin.com/in/krzysztof-nowak1993/"><img  src="#" /></a>
+      <div class="arrow">
+        <div class="arrow__first">
+          <span class="arrow__first__dash"></span>
+          <span class="arrow__first__dash"></span>
         </div>
-        <div class="arrow2">
-          <span></span>
-          <span></span>
+        <div class="arrow__second">
+          <span class="arrow__second__dash"></span>
+          <span class="arrow__second__dash"></span>
         </div>
       </div>
-    </main>
-    <footer><a href="mailto:krzysztofn1993@gmail.com"><img src="#" id="mail" /></a>
-    <a target="_blank" href="https://www.linkedin.com/in/krzysztof-nowak1993/"><img src="#" /></a>
-    </footer>
-
-    <script  src="scripts/main.js"></script>
+      </footer>
+    </div>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
