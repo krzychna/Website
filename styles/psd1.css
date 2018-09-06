@@ -1,0 +1,236 @@
+@media only screen{
+  html{
+    box-sizing: border-box;
+    font-family: 'Cabin', sans-serif;
+    min-width: 360px;
+
+  }
+  *, *::before, *::after{
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    background-image: url(../images_psd/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow-x: hidden;
+  }
+  .body-wrapper{
+    max-width: 1050px;
+    margin: 0 auto 60px;
+  }
+  .main-logo{
+    display: inline-block;
+    position: relative;
+    width: auto;
+    max-width: 420px;
+    margin-top: 40px;
+    opacity: 0.3;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .bottom-logo__element{
+    opacity: 0.3;
+    display: block;
+    margin: 30px auto;
+  }
+  .forms{
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .outer-rect{
+    width: 420px;
+    padding: 15px;
+    margin: 0 auto;
+  }
+  .outer-rect--styling{
+    background: rgba(0,0,0,0.3);
+    border-radius: 6px;
+  }
+  .inner-rect{
+    width: 100%;
+  }
+  .inner-rect--styling{
+    background: #f4f4f4;
+    border-radius: 6px;
+    padding-bottom: 20px;
+  }
+  .form-title{
+    margin: 20px 0;
+  }
+  .form-title--styling{
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+    font-weight: 300;
+  }
+  .inp-container{
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 20px;
+  }
+  .inp-container__element{
+    width: calc(100% - 80px);
+    height: 2.5em;
+    }
+  .inp-container__element--styling{
+    background-color: transparent;
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 4px;
+  }
+  input[type], select{
+    padding-left: 80px;
+    font-size: 16px;
+  }
+  select[name="geoloc"], textarea{
+    width: 100%;
+    color: rgba(0,0,0,0.5);
+    font-family: 'Cabin', sans-serif;
+    line-height: 1.5em;
+    font-size: 1.2em;
+  }
+  textarea{
+    resize: none;
+  }
+  .user-logo, .pass-logo, .env-logo, .geo-logo, .phone-logo {
+    opacity: 0.1;
+    width: 40px;
+    height: 26px;
+    position: absolute;
+    left: 15px;
+    top: 28px;
+    border-right: 2px solid black;
+    background-position: left center;
+    background-repeat: no-repeat;
+    }
+    .user-logo{
+      background-image: url(../images_psd/usericon.png);
+    }
+    .pass-logo{
+      background-image: url(../images_psd/lock.png);
+    }
+    .geo-logo{
+      background-image: url(../images_psd/geo.png);
+    }
+    .env-logo{
+      background-image: url(../images_psd/envelope.jpg);
+    }
+    .phone-logo{
+      background-image: url(../images_psd/phone.png);
+    }
+    .check{
+      position: relative;
+      margin-top: 10px;
+      opacity: 0.5;
+    }
+    .check p {
+      padding-left: 35px;
+    }
+    .square{
+      width: 1em;
+      height: 1em;
+      border: 1px solid black;
+      border-radius: 3px;
+      position: absolute;
+      left: 10px;
+      top: 0px;
+    }
+    .checked{
+      background:green;
+      width: 50%;
+      height: 50%;
+      left: 27%;
+      top: 28%;
+      border-radius: 2px;
+      position: absolute;
+    }
+    .button, .button-small{
+      width: 100%;
+      height: 3.25rem;
+      border-radius: 7px;
+      border: 0;
+    }
+    .button-small{
+      width: 45%;
+    }
+    .button--styling{
+      background: #93d02b;
+      font-family: 'Cabin', sans-serif;
+      font-size: 1.5em;
+      text-shadow: 1px 1px 1px black;
+      color: White;
+      box-shadow: inset 5px -5px 7px rgba(0,0,0,0.2);
+  }
+  .button--disabled{
+    opacity: 0.7;
+  }
+  .button--alert{
+    background: red;
+  }
+  .check-button-flex, .button-button-flex{
+    display: flex;
+    flex: 1 40%;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media only screen and (max-width: 40em){
+  .body-wrapper{
+    padding: 10% 3%;
+  }
+  .main-logo{
+    max-height: 60%;
+  }
+  .main-logo__element{
+    max-width: 50%;
+    align-self: center;
+  }
+  .forms__left-column, .forms__right-column{
+    width: 100%;
+  }
+  .forms{
+    margin: 0 auto;
+  }
+  .button--styling{
+    font-size: 1.2em;
+  }
+  html{
+    font-size: 16px;
+  }
+  .form-box{
+    width: 100%;
+    margin: 0 auto;
+  }
+  .outer-rect{
+    width: 90%;
+    min-width: 300px;
+  }
+
+}
+@media only screen and (min-width: 40em){
+
+}
+@media only screen and (min-width: 64em){
+
+}
+@media only screen and (min-width: 90em){
+
+  body{
+    font-size: 110%;
+  }
+}
+@media only screen and (max-width: 120em) and (min-width: 90em){
+  html {
+    padding:0 15%;
+   }
+}
+@media only screen and (min-width: 120.063em){
+  html {
+     padding:0 20%;
+  }
+}
