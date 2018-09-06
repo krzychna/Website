@@ -235,6 +235,11 @@
   .list-of-projects__element__description{
     padding-left: 20px;
   }
+  .psd-template{
+      text-decoration: underline !important;
+      color:  #e0436a !important;
+  }
+
   @keyframes Gradient {
     0% {
       background-position: 40% 0%
